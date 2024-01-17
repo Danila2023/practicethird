@@ -37,23 +37,29 @@ function rememberMyfilms() {
     }
   }
 
-  rememberMyfilms();
+  // rememberMyfilms();
 
-  
+
 
   function detectPersonalLevel() {
     if (personalMovieDB.count < 10) {
-    console.log("Просмотрено довольно мало фильмов");
-  } else if (personalMovieDB.count >= 10 && personalMovieDB < 30) {
-    console.log("Вы классический зритель");
-  } else if (personalMovieDB.count >= 30) {
-    console.log("Вы киноман");
-  } else {
-    console.log("Ошибка");
-  }
+      console.log("Просмотрено довольно мало фильмов");
+    } else if (personalMovieDB.count >= 10 && personalMovieDB < 30) {
+      console.log("Вы классический зритель");
+    } else if (personalMovieDB.count >= 30) {
+      console.log("Вы киноман");
+    } else {
+      console.log("Ошибка");
+    }
   }
 }
 
-detectPersonalLevel();
+// detectPersonalLevel();
 
-console.log(personalMovieDB);
+function showMyDB(hidden) {
+  if (!hidden) {
+    console.log(personalMovieDB);
+  }
+}
+
+showMyDB(personalMovieDB.privat);
